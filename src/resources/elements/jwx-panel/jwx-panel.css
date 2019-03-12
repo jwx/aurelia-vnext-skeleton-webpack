@@ -1,0 +1,56 @@
+jwx-panel {
+    display: block;
+}
+jwx-panel .panel-heading .content-expanded,
+jwx-panel .panel-heading .content-collapsed,
+jwx-panel .panel-heading .content-loading,
+jwx-panel .panel-heading .content-refresh {
+    float: right;
+    margin-left: 10px;
+}
+jwx-panel .panel-heading .content-refresh {
+    cursor: pointer;
+}
+
+jwx-panel :not(.expanded) > .panel-heading .content-expanded,
+jwx-panel :not(.expanded) > .panel-body {
+    display: none;
+}
+jwx-panel .expanded > .panel-heading .content-collapsed {
+    display: none;
+}
+
+/*
+    jwx-panel .loading > .panel-heading .content-expanded,
+    jwx-panel .loading > .panel-heading .content-collapsed,
+    jwx-panel .child-content-loading > .panel-heading .content-expanded,
+    jwx-panel .child-content-loading > .panel-heading .content-collapsed {
+        display: none;
+    }
+*/
+jwx-panel :not(.loading):not(.child-content-loading) > .panel-heading .content-loading {
+    display: none;
+}
+
+jwx-panel .loading > .panel-heading .content-refresh,
+jwx-panel .child-content-loading > .panel-heading .content-refresh {
+    display: none;
+}
+
+/*
+    .content-loading,
+    .content-refresh {
+        color: #337ab7;
+    }
+*/
+jwx-panel .panel-heading span {
+    font-variant-caps: small-caps;
+}
+jwx-panel .widget-heading {
+    padding: 1px 10px;
+}
+jwx-panel .widget-body {
+    padding: 8px 5px;
+    height: 235px;
+    overflow: auto;
+}

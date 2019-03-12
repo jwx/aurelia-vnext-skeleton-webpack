@@ -1,0 +1,73 @@
+jwx-table {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+jwx-table .table-container {
+    max-height: 500px;
+    overflow: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+jwx-table table {
+    margin-bottom: 10px;
+    border-collapse: separate;
+    -webkit-border-vertical-spacing: 0px;
+}
+
+jwx-table thead th {
+    background-color: #fff;
+    border-top: none;
+}
+
+jwx-table tbody tr:first-of-type td {
+    border-top: none;
+}
+
+jwx-table .footer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+jwx-table tr.clickable {
+    cursor: pointer;
+}
+
+jwx-table th .header-container {
+    position: relative;
+    min-width: 32px;
+}
+
+jwx-table th .header-title {
+    position: relative;
+    font-variant-caps: small-caps;
+    margin-right: 12px;
+}
+
+jwx-table th .header-action {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+jwx-table thead tr {
+    white-space: nowrap;
+}
+
+jwx-table thead tr th:hover {
+    background-color: #f8f8f8;
+}
+
+jwx-table thead tr th.row-color-marker {
+    width: 14px;
+}
+
+jwx-table .expand-table-container {
+    display: block !important;
+}
+
+jwx-table .item-select {
+    width: 13px;
+}

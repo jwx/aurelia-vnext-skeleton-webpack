@@ -1,0 +1,19 @@
+<template>
+    <div class="panel panel-default ${ widget ? 'widget widget-' + widget : '' } ${panelCss}" style="border: 1px solid green; margin: 10px;">
+        <div class="panel-heading ${ widget ? 'widget-heading' : '' }" click.trigger="toggleExpanded()" style="border: 1px solid yellow; margin: 10px;">
+            <template replaceable part="header">
+                <h4>
+                    <span if.bind="title">${title}</span> <span>${name}</span>
+                    <i if.bind="!widget" class="fa fa-lg fa-chevron-down content-expanded"></i>
+                    <i if.bind="!widget" class="fa fa-lg fa-chevron-right content-collapsed"></i>
+                    <i class="fa fa-lg fa-spinner fa-spin content-loading"></i>
+                    <span if.bind="refreshContent" click.trigger="refresh($event)"><i class="fa fa-lg fa-refresh content-refresh"></i></span>
+                </h4>
+            </template>
+        </div>
+        <div class="panel-body ${ widget ? 'widget-body' : '' }" style="border: 1px solid blue; margin: 10px;">
+            <template replaceable part="content">
+            </template>
+        </div>
+    </div>
+</template>

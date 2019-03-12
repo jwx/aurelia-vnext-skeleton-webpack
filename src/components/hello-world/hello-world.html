@@ -1,0 +1,15 @@
+<div class="greeting">Hello, ${greeted}!</div>
+<jwx-table>
+    <template replace-part="table">
+        <table>
+            <thead>
+                <th repeat.for="column of columns & spy:'th>columns'">${column.title}</th>
+            </thead>
+            <tbody>
+                <tr repeat.for="row of rows">
+                    <td repeat.for="column of columns & spy:'td>columns'">${row[column.name] & spy:'field'}</td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+</jwx-table>
