@@ -11,7 +11,7 @@ module.exports = function (env, { mode }) {
       modules: ['src', 'node_modules']
     },
     devServer: {
-      port: 9000,
+      port: 9010,
       historyApiFallback: true,
       open: true,
       lazy: false

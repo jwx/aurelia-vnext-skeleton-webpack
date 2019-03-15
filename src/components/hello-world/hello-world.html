@@ -1,13 +1,17 @@
 <div class="greeting">Hello, ${greeted}!</div>
-<jwx-table>
+<jwx-table rows.bind="rows">
     <template replace-part="table">
+        <p>Property in hellow-world.ts: ${greeted}</p>
         <table>
             <thead>
-                <th repeat.for="column of columns & spy:'th>columns'">${column.title}</th>
+                <th repeat.for="column of columns">${column.title}</th>
+                <th></th>
             </thead>
             <tbody>
-                <tr repeat.for="row of rows">
-                    <td repeat.for="column of columns & spy:'td>columns'">${row[column.name] & spy:'field'}</td>
+                <tr repeat.for="row of data">
+                    <td>${row.id}</td>
+                    <td>${row.text}</td>
+                    <td><button type="button" click.delegate="remove()"><i class="fa fa-times"></i></button></td>
                 </tr>
             </tbody>
         </table>

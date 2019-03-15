@@ -20,4 +20,8 @@ export class HelloWorld {
             this.rows.push({ id: i, text: `Row No ${i}` });
         }
     }
+
+    public remove() {
+        alert('Success!');
+    }
 }

@@ -21,6 +21,6 @@ container.register(resources as any);
 components.configure(container);
 
 window['au'] = new Aurelia(container)
-  .register(DebugConfiguration)
+  // .register(DebugConfiguration)
   .app({ host: document.querySelector('app'), component: App })
   .start();

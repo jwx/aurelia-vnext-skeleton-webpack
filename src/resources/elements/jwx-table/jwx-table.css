@@ -5,7 +5,7 @@ jwx-table {
 }
 
 jwx-table .table-container {
-    max-height: 500px;
+    max-height: 200px;
     overflow: auto;
     border-bottom: 1px solid #ccc;
 }
@@ -14,15 +14,24 @@ jwx-table table {
     margin-bottom: 10px;
     border-collapse: separate;
     -webkit-border-vertical-spacing: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    width: 100%;
 }
 
 jwx-table thead th {
     background-color: #fff;
     border-top: none;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
 }
 
 jwx-table tbody tr:first-of-type td {
+    padding-top: 2px;
     border-top: none;
+}
+jwx-table tbody tr td {
+    padding-top: 2px;
+    border-bottom: 1px solid #eee;
 }
 
 jwx-table .footer {
